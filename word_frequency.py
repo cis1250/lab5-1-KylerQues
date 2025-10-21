@@ -37,9 +37,8 @@ def main():
             else:
                 print("Invalid sentence.")
         
-    def calculate_frequencies(text):
-        text = text.lower()
-        words = text.split()
+    def calculate_frequencies(sentence):
+        sentence = sentence.lower()
         for char in string.punctuation:
             sentence = sentence.replace(char, "")
         words = sentence.split()
@@ -48,23 +47,24 @@ def main():
             frequencies[word] = frequencies.get(word, 0) + 1
         return list(frequencies.keys()), list(frequencies.values())
 
-    def print_frequencies(text1, text2):
+    def print_frequencies(words, frequencies):
         print("Words:", words)
         print("Frequencies:", frequencies)
                 
         
         
         
-    # Get a valid sentence from the user
     sentence = get_sentence()
-
-    # Calculate word frequencies
     words, frequencies = calculate_frequencies(sentence)
-    
-    # Print the results
     print_frequencies(words, frequencies)
 
     
+
+
+
+
+
+
 
 
 
